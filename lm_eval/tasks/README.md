@@ -107,6 +107,7 @@
 | [translation](translation/README.md) | Tasks focused on evaluating the language translation capabilities of models. | Arabic, English, Spanish, Basque, Hindi, Indonesian, Burmese, Russian, Swahili, Telugu, Chinese |
 | [triviaqa](triviaqa/README.md) | A large-scale dataset for trivia question answering to test general knowledge. | English |
 | [truthfulqa](truthfulqa/README.md) | A QA task aimed at evaluating the truthfulness and factual accuracy of model responses. | English |
+| [turkishmmlu](turkishmmlu/README.md) | A multiple-choice QA test modeled after MMLU, written in Turkish based on Turkish high-school level exams. | Turkish |
 | [unitxt](unitxt/README.md) | A number of tasks implemented using the unitxt library for flexible, shareable, and reusable data preparation and evaluation for generative AI. | English |
 | [unscramble](unscramble/README.md) | Tasks involving the rearrangement of scrambled sentences to test syntactic understanding. | English |
 | [webqs](webqs/README.md) | Web-based question answering tasks designed to evaluate internet search and retrieval. | English |
@@ -120,3 +121,4 @@
 | [xnli_eu](xnli_eu/README.md) | Cross-lingual Natural Language Inference tasks in Basque. | Basque |
 | [xstorycloze](xstorycloze/README.md) | Cross-lingual narrative understanding tasks to predict story endings in multiple languages. | Russian, Simplified Chinese, Spanish, Arabic, Hindi, Indonesian, Telugu, Swahili, Basque, Burmese |
 | [xwinograd](xwinograd/README.md) | Cross-lingual Winograd schema tasks for coreference resolution in multiple languages. | English, French, Japanese, Portuguese, Russian, Chinese |
+| [portuguese_bench](portuguese_bench/README.md) | Collection of tasks in European Portuguese encompassing various evaluation areas. | Portuguese |
