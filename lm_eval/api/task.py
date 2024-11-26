@@ -22,7 +22,6 @@ from typing import (
 
 import datasets
 import numpy as np
-import unitxt
 from tqdm import tqdm
 
 from lm_eval import utils
@@ -264,24 +263,13 @@ class Task(abc.ABC):
             - `datasets.DownloadMode.FORCE_REDOWNLOAD`
                 Fresh download and fresh dataset.
         """
-        # self.dataset = datasets.load_dataset(
-        #     path=self.DATASET_PATH,
-        #     name=self.DATASET_NAME,
-        #     data_dir=data_dir,
-        #     cache_dir=cache_dir,
-        #     download_mode=download_mode,
-        # )
-
-        if self.DATASET_PATH == "unitxt/data":
-            self.dataset = unitxt.load_dataset(self.DATASET_NAME)
-        else:
-            self.dataset = datasets.load_dataset(
-                path=self.DATASET_PATH,
-                name=self.DATASET_NAME,
-                data_dir=data_dir,
-                cache_dir=cache_dir,
-                download_mode=download_mode,
-            )
+        self.dataset = datasets.load_dataset(
+            path=self.DATASET_PATH,
+            name=self.DATASET_NAME,
+            data_dir=data_dir,
+            cache_dir=cache_dir,
+            download_mode=download_mode,
+        )
 
     @property
     def config(self) -> TaskConfig:
