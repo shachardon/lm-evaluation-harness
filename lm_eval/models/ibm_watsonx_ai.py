@@ -5,6 +5,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, List, NamedTuple, Optional, Tuple, Type, cast
 
+from tenacity import retry, stop_after_attempt, wait_exponential
 from tqdm import tqdm
 
 from lm_eval.api.instance import Instance
@@ -276,11 +277,16 @@ class WatsonxLLM(LM):
         ):
             batch = requests[i : i + batch_size]
             try:
-                responses = self.model.generate_text(batch, self.generate_params)
+                responses = retry(
+                    stop=stop_after_attempt(5),
+                    wait=wait_exponential(multiplier=0.5, min=1, max=10),
+                    reraise=True,
+                )(self.model.generate_text)(batch, self.generate_params)
 
             except Exception as exp:
                 eval_logger.error(f"Error while generating text {exp}")
                 continue
+                # exit
 
             for response, context in zip(responses, batch):
                 results.append(response)
