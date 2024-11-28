@@ -54,7 +54,7 @@ Naming convention: 'bluebench_{scenario}_{sub-scenario}'
 * `bluebench_translation_mt_flores_101_ron_eng`
 * `bluebench_translation_mt_flores_101_spa_eng`
 * `bluebench_chatbot_abilities_cards_arena_hard_generation_english_gpt_4_0314_reference`
-* `bluebench_news_classification_20_newsgroups`
+* `bluebench_news_classification_20_newsgroups_short`
 * `bluebench_bias_safety_bbq_age`
 * `bluebench_bias_safety_bbq_disability_status`
 * `bluebench_bias_safety_bbq_gender_identity`
