@@ -1,5 +1,5 @@
 group: bluebench_news_classification
 task:
-  - "bluebench_news_classification_20_newsgroups"
+  - "bluebench_news_classification_20_newsgroups_short"
 metadata:
   version: 0

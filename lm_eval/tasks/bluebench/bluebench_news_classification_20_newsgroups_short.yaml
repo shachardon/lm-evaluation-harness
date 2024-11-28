@@ -1,0 +1,5 @@
+task: bluebench_news_classification_20_newsgroups_short
+include: unitxt
+recipe: recipes.bluebench.news_classification.20_newsgroups_short
+metadata:
+  version: 0
