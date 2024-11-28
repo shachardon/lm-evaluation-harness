@@ -20,7 +20,7 @@ for model_done_dir in model_done_dirs:
 
     multi_metric_dict = {
         "legalbench": "accuracy,none",
-        "20_newsgroups": "accuracy,none",
+        "20_newsgroups_short": "accuracy,none",
         "product_help_cfpb": "accuracy,none",
         "rag_response_generation_clapnq": "rag.response_generation.correctness.bert_score.deberta_large_mnli,none",
     }
