@@ -12,13 +12,13 @@ from tqdm import tqdm
 
 # Constants (unchanged)
 TASK = "bluebench"
-OUTPUT_DIR_NAME = "bluebench"
+OUTPUT_DIR_NAME = "bluebench_with_chat_api_fix"
 MEMORY = "30g"
 CORES = "4+0"
 QUEUE = "x86_24h"
 PYTHON_EXECUTABLE = "/dccstor/eval-research/miniforge3/envs/lmeval/bin/python"
 OUTPUT_BASE_PATH = (
-    f"/dccstor/eval-research/code/lm-evaluation-harness/outputs/{OUTPUT_DIR_NAME}/"
+    f"/dccstor/eval-research/code/lm-evaluation-harness/output/{OUTPUT_DIR_NAME}/"
 )
 MODELS = [
     "ibm/granite-3-8b-instruct",
@@ -80,6 +80,7 @@ def run_job(model_id):
         "--cache_requests",
         "true",
         "--log_samples",
+        "--apply_chat_template",
     ]
 
     try:
