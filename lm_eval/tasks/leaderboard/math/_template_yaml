@@ -1,4 +1,5 @@
-dataset_path: lighteval/MATH-Hard
+# changed according to https://github.com/EleutherAI/lm-evaluation-harness/issues/2618#issuecomment-2583172531
+dataset_path: EleutherAI/hendrycks_math
 process_docs: !function utils.process_docs
 output_type: generate_until
 training_split: train
